@@ -100,6 +100,33 @@ export const TechOrbit: React.FC = () => {
     )
 }
 
+export const SkillOrbitModel: React.FC = () => {
+  return (
+    <div className="relative w-80 h-80 perspective-1000 pointer-events-none">
+      <div className="absolute inset-0 preserve-3d animate-spin-slow">
+        {/* Central Core */}
+        <div className="absolute top-1/2 left-1/2 w-16 h-16 -ml-8 -mt-8 bg-primary-500/20 rounded-full blur-md animate-pulse"></div>
+        <div className="absolute top-1/2 left-1/2 w-10 h-10 -ml-5 -mt-5 bg-white rounded-full shadow-[0_0_40px_rgba(14,165,233,0.8)]"></div>
+        
+        {/* Ring 1 - Blue */}
+        <div className="absolute top-1/2 left-1/2 w-60 h-60 -ml-30 -mt-30 border border-primary-400/40 rounded-full preserve-3d animate-spin-reverse" style={{ transform: 'rotateX(75deg)', marginLeft: '-7.5rem', marginTop: '-7.5rem' }}>
+           <div className="absolute top-0 left-1/2 w-4 h-4 bg-blue-400 rounded-full shadow-[0_0_15px_rgba(56,189,248,1)] transform -translate-x-1/2 -translate-y-1/2"></div>
+        </div>
+
+        {/* Ring 2 - Purple */}
+        <div className="absolute top-1/2 left-1/2 w-48 h-48 -ml-24 -mt-24 border border-purple-500/40 rounded-full preserve-3d animate-spin-slow" style={{ transform: 'rotateX(75deg) rotateY(60deg)', marginLeft: '-6rem', marginTop: '-6rem' }}>
+           <div className="absolute bottom-0 left-1/2 w-3 h-3 bg-purple-400 rounded-full shadow-[0_0_15px_rgba(168,85,247,1)] transform -translate-x-1/2 translate-y-1/2"></div>
+        </div>
+
+        {/* Ring 3 - Green */}
+        <div className="absolute top-1/2 left-1/2 w-72 h-72 -ml-36 -mt-36 border border-green-500/40 rounded-full preserve-3d animate-spin-slower" style={{ transform: 'rotateX(75deg) rotateY(-60deg)', marginLeft: '-9rem', marginTop: '-9rem' }}>
+           <div className="absolute top-1/2 right-0 w-3.5 h-3.5 bg-green-400 rounded-full shadow-[0_0_15px_rgba(34,197,94,1)] transform translate-x-1/2 -translate-y-1/2"></div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 export const DataPillar: React.FC = () => {
     const { style, handleMouseMove, handleMouseLeave } = useMouseParallax(10);
 
